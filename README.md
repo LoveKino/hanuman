@@ -99,5 +99,14 @@ console.log(tokenTree);
 ```
 Result is a root of a tree.
 
+how to use hanuman
+--------------------------------------------------------
 On the whole, example code contains two parts:
 ### create a tokenSpliter
+
+TokenSpliter instance is a text handling tool which is responsible for building a token tree. When we create a tokenSpliter, we are describe the ability of tokenSpliter, it includes these aspect:
+#### should recognition which tokens.
+#### the strcture of a token
+#### it's an inline token or a block token. A block token needs end-tag, an inline token does not.
+
+
