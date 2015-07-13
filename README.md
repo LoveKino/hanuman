@@ -133,3 +133,18 @@ These object looks like:
 * block<br>
   Block config. You can set type for block. If type is "start", means this token is the start of a block. If type is "end" means this token is the end of a block. In the example, <#b1#> is the start of a block, <#/b1#> is the end of a block.
 
+#### Build token tree
+This step is very easy, you just need to call buildTokenTree function.
+```
+var tokenTree = tokenSpliter.buildTokenTree(source);
+```
+TokenTree is a tree structure. For every node, it has two parts:
+* token<br>
+  Token saves token object.
+* children<br>
+  Children are son nodes of this node.
+
+
+
+
+
