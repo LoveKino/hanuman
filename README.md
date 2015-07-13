@@ -122,7 +122,7 @@ These object looks like:
 }
 ```
 * leftDelimiter<br>
-  Left delimiter regExp. Delimiter is the boundary of a word. It could used to warn us there is a token. But it won't be    included in the token' word. It's just a boundary. Left delimiter is used to warn us that you reached a token.
+  Left delimiter regExp. Delimiter is the boundary of a word. It could used to warn us there is a token. But it won't be included in the token' word. It's just a boundary. Left delimiter is used to warn us that you reached a token.
 * wordReg<br>
   Token's word's regExp.
 * rightDelimiter<br>
@@ -131,5 +131,5 @@ These object looks like:
 * type<br>
   Define a type for your token.
 * block<br>
-  Block config.
+  Block config. You can set type for block. If type is "start", means this token is the start of a block. If type is "end" means this token is the end of a block. In the example, <#b1#> is the start of a block, <#/b1#> is the end of a block.
 
