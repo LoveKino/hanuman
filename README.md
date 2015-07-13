@@ -27,3 +27,67 @@ hello world!
 Here, we imitate directory structure to express tree. It means root has two chidlren, "hello world" and b1. B1 has two children, "Ok, this is block one." and b2. B2 has one child "This is block2".
 
 This is hanuman's main job, to make text structured.
+
+install and require
+-------------------------------------------------------------------
+```
+npm install hanuman
+```
+```
+var TokenSpliter = require("hanuman");
+```
+A example
+---------------------------------------------------------------------
+Text like this: 
+```
+hello world!
+<#b1#> 
+    Ok, this is block one.
+    <#b2#>
+        This is block2
+    <#/b2#>
+<#/b1#>
+```
+Define a token spliter and build a token tree.
+```
+var TokenSpliter = require("hanuman");
+var _left = "<#";
+var _right = "#>";
+var tokenSpliter = new TokenSpliter([{
+	leftDelimiter: _left + "b1",
+	wordReg: ".*?",
+	rightDelimiter: _right,
+	type: "b1",
+	block: {
+		type: "start"
+	}
+}, {
+	leftDelimiter: _left + "\\s*\\/b1(?=(" + _right + ")|\\s)",
+	wordReg: ".*?",
+	rightDelimiter: _right,
+	type: "close",
+	block: {
+		type: "end",
+		cooper: "b1"
+	}
+}, {
+	leftDelimiter: _left + "b2",
+	wordReg: ".*?",
+	rightDelimiter: _right,
+	type: "b2",
+	block: {
+		type: "start"
+	}
+}, {
+	leftDelimiter: _left + "b2",
+	wordReg: ".*?",
+	rightDelimiter: _right,
+	type: "b2",
+	block: {
+		type: "end"
+	}
+}]);
+
+var tokenTree = tokenSpliter.buildTokenTree(source);
+console.log(tokenTree);
+```
