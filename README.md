@@ -47,6 +47,7 @@ hello world!
         This is block2
     <#/b2#>
 <#/b1#>
+<#include name="ok!"#>
 ```
 Define a token spliter and build a token tree.
 ```
@@ -65,10 +66,9 @@ var tokenSpliter = new TokenSpliter([{
 	leftDelimiter: _left + "\\s*\\/b1(?=(" + _right + ")|\\s)",
 	wordReg: ".*?",
 	rightDelimiter: _right,
-	type: "close",
+	type: "b1",
 	block: {
 		type: "end",
-		cooper: "b1"
 	}
 }, {
 	leftDelimiter: _left + "b2",
@@ -79,14 +79,20 @@ var tokenSpliter = new TokenSpliter([{
 		type: "start"
 	}
 }, {
-	leftDelimiter: _left + "b2",
+	leftDelimiter: _left + "\\s*\\/b2(?=(" + _right + ")|\\s)",
 	wordReg: ".*?",
 	rightDelimiter: _right,
 	type: "b2",
 	block: {
 		type: "end"
 	}
+}, {
+	leftDelimiter: _left + "\\s*include(?=(" + _right + ")|\\s)",
+	wordReg: ".*?",
+	rightDelimiter: _right,
+	type: "include"
 }]);
+
 
 var tokenTree = tokenSpliter.buildTokenTree(source);
 console.log(tokenTree);
