@@ -121,3 +121,10 @@ These object looks like:
 	}
 }
 ```
+* leftDelimiter --------------------------- left delimiter regexp
+* wordReg --------------------------------- token's word's regexp
+* rightDelimiter -------------------------- right delimiter regexp
+* type ------------------------------------ define a type for your token
+* block 
+  | |-type -------------------------------
+
