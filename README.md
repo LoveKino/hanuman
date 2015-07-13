@@ -122,13 +122,14 @@ These object looks like:
 }
 ```
 * leftDelimiter<br>
-  left delimiter regexp.
+  Left delimiter regexp. Delimiter is the boundary of a word. It could used to warn us there is a token. But it won't be    included in the token' word. It's just a boundary.
+  
 * wordReg<br>
-  token's word's regexp.
+  Token's word's regexp.
 * rightDelimiter<br>
-  right delimiter regexp.
+  Right delimiter regexp.
 * type<br>
-  define a type for your token.
+  Define a type for your token.
 * block<br>
-  block config
+  Block config.
 
