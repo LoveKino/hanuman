@@ -97,3 +97,7 @@ var tokenSpliter = new TokenSpliter([{
 var tokenTree = tokenSpliter.buildTokenTree(source);
 console.log(tokenTree);
 ```
+Result is a root of a tree.
+
+On the whole, example code contains two parts:
+### create a tokenSpliter
