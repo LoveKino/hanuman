@@ -1,0 +1,30 @@
+{
+  "name": "hanuman",
+  "version": "0.0.3",
+  "description": "a simple and flexible token spliter",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LoveKino/hanuman.git"
+  },
+  "keywords": [
+    "token",
+    "spliter",
+    "lexcial analyzer",
+    "text analyzer"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "ddchen",
+    "email": "842914439@qq.com"
+  }
+}
