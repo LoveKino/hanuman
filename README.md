@@ -1,7 +1,7 @@
 hanuman
 =================================== 
 Hanuman is token spliter which can build a token tree or a token array.
-Hanuman is Highly configurable.
+Hanuman is simple flexible.
 
 What can hanuman do?
 -----------------------------------
@@ -15,7 +15,7 @@ hello world!
 	<#/b2#>
 <#/b1#>
 ```
-<#b1#> and <#/b1#> are a pair of tags. <#b2#> and <#/b2#> are a pair of tags. Obviously, when we analysis that text, we expect a structured object like next:
+<#b1#> and <#/b1#> are a pair of tags. <#b2#> and <#/b2#> are a pair of tags. Obviously, when we analysis that text, we expect a structured object like this:
 ```
 |-{root}
 |  |-(hello world!)
