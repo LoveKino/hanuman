@@ -99,7 +99,7 @@ console.log(tokenTree);
 ```
 Result is a root of a tree.
 
-how to use hanuman
+How to use hanuman
 --------------------------------------------------------
 On the whole, example code contains two parts:
 ### Create a tokenSpliter
