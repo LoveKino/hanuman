@@ -36,7 +36,7 @@ npm install hanuman
 ```
 var TokenSpliter = require("hanuman");
 ```
-A example
+An example
 ---------------------------------------------------------------------
 Text like this: 
 ```
