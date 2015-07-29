@@ -1,7 +1,7 @@
 {
   "name": "hanuman",
   "version": "0.0.4",
-  "description": "a simple and flexible token spliter",
+  "description": "A simple and flexible token spliter, support build token tree.",
   "directories": {
     "test": "test"
   },
